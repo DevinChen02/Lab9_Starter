@@ -102,6 +102,133 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
+
+    // Console Log
+    errorBtns[0].addEventListener("click", function_Log);
+    function function_Log(){
+      console.log("Console Log Demo");
+    }
+
+    // Console Error
+    errorBtns[1].addEventListener("click", function_Error);
+    function function_Error(){
+      console.error("Console Error Demo");
+    }
+
+    // Console Count
+    errorBtns[2].addEventListener("click", function_Count);
+    function function_Count(){
+      console.count('Count Button');
+    }
+
+    // Console Warn
+    errorBtns[3].addEventListener("click", function_Warn);
+    function function_Warn(){
+      console.warn('Console Warn Demo');
+    }
+
+    // Console Assert
+    errorBtns[4].addEventListener("click", function_Assert);
+    function function_Assert(){
+      const number = 2;
+      const errorMsg = 'The number does not equal 3';
+      console.assert(number == 3, {number, errorMsg});
+    }
+
+    // Console Clear
+    errorBtns[5].addEventListener("click", function_Clear);
+    function function_Clear(){
+      console.clear();
+    }
+
+    // Console Dir
+    errorBtns[6].addEventListener("click", function_Dir);
+    function function_Dir(){
+      console.dir(errorBtns[6]);
+    }
+
+    // Console dirxml
+    errorBtns[7].addEventListener("click", () => {
+      console.dirxml(errorBtns[7]);
+    })
+
+    // Console Group Start
+    errorBtns[8].addEventListener("click", () => {
+      const label = 'console.group';
+      console.group(label);
+    })
+
+    // Console Group End
+    errorBtns[9].addEventListener("click", () => {
+      console.groupEnd();
+    })
+
+    // Console Table
+    errorBtns[10].addEventListener("click", () => {
+      var myTable = [
+      {
+        name: 'Software Engineering',
+        num: 110,
+      },
+      {
+        name: 'Programming Languages: Principles and Paradigms',
+        num: 130,
+      },
+      {
+        name: 'Advanced Software Engineering',
+        num: 112,
+      }
+      ];
+      console.table(myTable);
+    })
+
+    // Console Start Timer
+    errorBtns[11].addEventListener("click", () => {
+      console.time('Timer Button');
+    })
+
+    // Console End Timer
+    errorBtns[12].addEventListener("click", () => {
+      console.timeEnd('Timer Button');
+    })
+
+    // Console Trace ---- FINE to have anynomous??
+    errorBtns[13].addEventListener("click", () => {
+      const handleBtnClick = () => { deep(); };
+      const deep = () => { deeper(); };
+      const deeper = () => { deepest(); };
+      const deepest = () => { console.trace(); };
+      handleBtnClick();
+    })
+
+    // Trigger a Global Error 
+    errorBtns[14].addEventListener("click", () => {
+      // remember to insert code here
+      try {
+      //... try to execute the code ...
+      const unchangeableNum = 0;
+      unchangeableNum = 1;
+      } catch (err) {
+        //... handle errors ...
+      } finally {
+        //... execute always ...
+      }
+    })
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
   </script>
 </body>
 
